@@ -11,9 +11,6 @@
         {%- for item in nav | rejectattr("hidden") %}
         <li><a href="{{ item.url }}">{{ item.label }}</a></li>
         {%- endfor %}
-        {%- if site.email %}
-        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        {%- endif %}
       </ul>
       {%- if site.footer_note %}
       <p class="site-footer__note">{{ site.footer_note }}</p>
