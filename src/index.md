@@ -10,7 +10,7 @@ hero:
   subhead: For 100 years, Fort Hill, Smith College's Center for Early Childhood
     Education, has cared for young children in Northampton. On October 19,
     2026, families and staff learned from a surprise email that Smith plans to
-    close it on June 4, 2027. No parents, faculty, students, or Fort Hill staff were
+    close the center on June 4, 2027. No parents, faculty, students, or Fort Hill staff were
     involved in this decision. **The impact of Fort Hill's closure would be
     devastating** – for current families, faculty, staff, students, alums, the
     local community, and the college's reputation.
