@@ -94,6 +94,8 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 .section { padding-block: var(--space-l); }
+/* Follows another section: its bottom padding is spacing enough */
+.section--flush-top { padding-top: 0; }
 
 .visually-hidden {
   position: absolute !important;
@@ -316,6 +318,7 @@ a:hover { text-decoration-thickness: 2px; }
 /* --- Prose (editor-written Markdown) ------------------------------------- */
 
 .prose { max-width: 42rem; }
+.prose--centered { margin-inline: auto; }
 /* Intro blocks: every paragraph at lead size, so editors adding one get no surprises */
 .prose--lead > p { font-size: var(--step-1); line-height: 1.5; }
 .prose h2 { font-size: var(--step-2); margin-top: 1.75em; }
