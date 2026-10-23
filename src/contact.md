@@ -5,4 +5,4 @@ description: Get in touch with the organizers of the campaign to save the Center
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. The fastest way to get involved is to sign up for updates. For anything else, email us.
 
-I'm adding some content, and it's really fun!
+I'm adding some content, and it's really fun! So fun!
