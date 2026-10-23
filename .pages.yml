@@ -124,18 +124,6 @@ content:
             label: Text under the headline
             description: Wrap words in **double asterisks** to make them bold.
             type: text
-      - name: facts
-        label: Key facts
-        description: Big numbers under the top section. Two to four works best.
-        type: object
-        list: true
-        fields:
-          - name: number
-            label: Number
-            type: string
-          - name: label
-            label: What it means
-            type: string
       - name: body
         label: Main text
         type: rich-text

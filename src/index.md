@@ -13,15 +13,6 @@ hero:
     involved in this decision. **The impact of Fort Hill's closure would be
     devastating** – for current families, faculty, staff, students, alums, the
     local community, and the college's reputation.
-facts:
-  - number: "90"
-    label: Children Fort Hill serves today
-  - number: June 4, 2027
-    label: Planned closure date
-  - number: "100"
-    label: Years of Fort Hill. The center just marked its 100th anniversary.
-  - number: Hundreds
-    label: People already involved in keeping Fort Hill open
 ---
 ## What's happening
 

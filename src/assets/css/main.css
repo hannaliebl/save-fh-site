@@ -313,39 +313,6 @@ a:hover { text-decoration-thickness: 2px; }
   .hero__decor--bolt-left { left: 0; bottom: 0; height: 48%; width: auto; }
 }
 
-/* --- Key facts ----------------------------------------------------------- */
-
-.facts { border-bottom: 1px solid var(--rule); }
-.facts__list {
-  display: grid;
-  gap: var(--space-m);
-  margin: 0 auto;
-  padding-block: var(--space-m);
-  list-style: none;
-}
-@media (min-width: 40rem) {
-  .facts__list { grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); }
-}
-.fact {
-  display: grid;
-  gap: 0.35rem;
-  padding-top: 0.9rem;
-  border-top: 6px solid var(--orange);
-}
-.fact__number {
-  font-family: var(--font-display);
-  font-weight: var(--display-weight);
-  font-stretch: var(--display-stretch);
-  font-size: var(--step-3);
-  line-height: 1;
-}
-.fact__label {
-  color: var(--ink-2);
-  font-family: var(--font-ui);
-  font-size: var(--step--1);
-  line-height: 1.4;
-}
-
 /* --- Prose (editor-written Markdown) ------------------------------------- */
 
 .prose { max-width: 42rem; }

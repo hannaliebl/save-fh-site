@@ -15,7 +15,7 @@ npm run build      # outputs _site/
 | File | What it is | Edited by |
 |------|------------|-----------|
 | `src/_data/site.json` | Letter / join / resources links, contact email, announcement banner, footer | CMS |
-| `src/index.md` | Home page (hero, key facts, main text) | CMS |
+| `src/index.md` | Home page (hero, main text) | CMS |
 | `src/_data/press.json` | Press coverage cards, shown in list order | CMS |
 | `src/faq.md` | FAQ questions and answers (answers are Markdown in front matter) | CMS |
 | `src/press.md`, `src/contact.md` | Press and Contact page text | CMS |

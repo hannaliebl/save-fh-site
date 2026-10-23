@@ -85,19 +85,6 @@ layout: layouts/base.njk
 </section>
 {%- endif %}
 
-{%- if facts and facts.length %}
-<section class="facts" aria-label="Key facts">
-  <ul class="wrap facts__list">
-    {%- for fact in facts %}
-    <li class="fact">
-      <span class="fact__number">{{ fact.number }}</span>
-      <span class="fact__label">{{ fact.label }}</span>
-    </li>
-    {%- endfor %}
-  </ul>
-</section>
-{%- endif %}
-
 <div class="wrap section">
   <div class="prose">
     {{ content | safe }}
