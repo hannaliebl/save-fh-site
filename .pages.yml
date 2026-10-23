@@ -59,8 +59,13 @@ content:
           message: Must be a full web address starting with https://
       - name: letter_label
         label: Letter button text
+        description: Used on the big button at the top of the home page and in the footer.
         type: string
         required: true
+      - name: letter_label_short
+        label: Letter button text (short)
+        description: For the small button in the header. Keep it to a few words so it fits on phones.
+        type: string
       - name: signup_url
         label: Join / sign-up form link
         description: The "Join the fight" Google Form for updates and volunteers.
