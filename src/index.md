@@ -11,7 +11,7 @@ hero:
   subhead: Smith College plans to close Fort Hill. Lorem ipsum dolor sit amet,
     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
 facts:
-  - number: XX
+  - number: "90"
     label: Families with children enrolled today (placeholder)
   - number: XXXX
     label: Planned closure date (placeholder)
