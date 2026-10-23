@@ -4,13 +4,12 @@ description: Smith College plans to close the Center for Early Childhood
   Education at Fort Hill, just after its 100th anniversary. Parents, staff,
   faculty, and community members are working to keep it open.
 hero:
-  kicker: Center for Early Childhood Education at Fort Hill · Northampton, MA
   headline: |-
     Protect teachers. Protect children.
     Keep Fort Hill open.
   subhead: On October 19, families and staff learned from a surprise email that
-    Smith College plans to close Fort Hill, just after the center's 100th
-    anniversary. No parents, faculty, students, or Fort Hill staff were
+    Smith College plans to close Fort Hill (Smith College's Center for Early
+    Childhood Education), just after the center's 100th anniversary. No parents, faculty, students, or Fort Hill staff were
     involved in this decision. **The impact of Fort Hill's closure would be
     devastating** – for current families, faculty, staff, students, alums, the
     local community, and the college's reputation.
