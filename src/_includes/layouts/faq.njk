@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+---
+{% include "partials/page-header.njk" %}
+
+<div class="wrap section">
+  <div class="prose prose--lead">
+    {{ content | safe }}
+  </div>
+
+  {%- if questions and questions.length %}
+  <div class="faq">
+    {%- for item in questions %}
+    <details class="faq__item" id="{{ item.question | slugify }}">
+      <summary class="faq__question">{{ item.question }}</summary>
+      <div class="faq__answer prose">
+        {{ item.answer | markdown | safe }}
+      </div>
+    </details>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+</div>
+
+{% include "partials/signup-band.njk" %}

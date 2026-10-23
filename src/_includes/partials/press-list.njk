@@ -1,0 +1,12 @@
+<ol class="press-list">
+  {%- for item in items %}
+  <li class="press-item">
+    <p class="press-item__meta">
+      <span class="press-item__outlet">{{ item.outlet }}</span>
+      {%- if item.date %}<time datetime="{{ item.date | isoDate }}">{{ item.date | longDate }}</time>{% endif %}
+    </p>
+    <h3 class="press-item__headline"><a href="{{ item.url }}">{{ item.headline }}</a></h3>
+    {%- if item.summary %}<p class="press-item__summary">{{ item.summary }}</p>{% endif %}
+  </li>
+  {%- endfor %}
+</ol>

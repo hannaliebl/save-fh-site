@@ -1,0 +1,57 @@
+name: Deploy to GitHub Pages
+
+# Runs on every push to main — including saves from Pages CMS.
+# If a build fails, the previous version of the site stays live.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only the newest push deploys; superseded runs are cancelled.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - run: npm ci
+
+      # base_path is "/<repo>" on username.github.io, "" on a custom domain.
+      - run: npm run build
+        env:
+          NODE_ENV: production
+          PATH_PREFIX: ${{ steps.pages.outputs.base_path }}/
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+          # Hide the test site from search engines. Set to "false" at launch.
+          NOINDEX: "true"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+{% include "partials/page-header.njk" %}
+
+<div class="wrap section">
+  <div class="prose prose--lead">
+    {{ content | safe }}
+  </div>
+
+  <div class="contact-actions">
+    <a class="button button--large" href="{{ site.signup_url }}">{{ site.signup_label }}</a>
+    {%- if site.email %}
+    <a class="button button--large button--ghost" href="mailto:{{ site.email }}">Email {{ site.email }}</a>
+    {%- endif %}
+  </div>
+</div>

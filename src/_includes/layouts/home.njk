@@ -1,0 +1,57 @@
+---
+layout: layouts/base.njk
+---
+<section class="hero">
+  {#- Composition follows the march poster. Decorations are cut from it; purely visual. #}
+  <img class="hero__decor hero__decor--bolt-right" src="/assets/img/poster/bolt-right.png" alt="" width="196" height="523">
+  <img class="hero__decor hero__decor--bolt-left" src="/assets/img/poster/bolt-left.png" alt="" width="137" height="452">
+  <div class="hero__inner">
+    <div class="hero__mark">
+      <img class="hero__decor hero__decor--mega-left" src="/assets/img/poster/megaphone-left.png" alt="" width="238" height="206">
+      <h1 class="hero__logo">
+        <img src="/assets/img/poster/logo-white.png" alt="{{ site.title }}!" width="464" height="532">
+      </h1>
+      <img class="hero__decor hero__decor--tulip" src="/assets/img/poster/tulip.png" alt="" width="126" height="240">
+    </div>
+    {%- if hero.headline %}<p class="hero__headline">{{ hero.headline | trim | escape | replace("\n", "<br>") | safe }}</p>{% endif %}
+    {%- if hero.subhead %}<p class="hero__subhead">{{ hero.subhead }}</p>{% endif %}
+    <div class="hero__actions">
+      <a class="button button--large" href="{{ site.signup_url }}">{{ site.signup_label }}</a>
+      <a class="button button--large button--ghost" href="/press/">Read the coverage</a>
+    </div>
+    {%- if hero.kicker %}<p class="hero__kicker">{{ hero.kicker }}</p>{% endif %}
+  </div>
+</section>
+
+{%- if facts and facts.length %}
+<section class="facts" aria-label="Key facts">
+  <ul class="wrap facts__list">
+    {%- for fact in facts %}
+    <li class="fact">
+      <span class="fact__number">{{ fact.number }}</span>
+      <span class="fact__label">{{ fact.label }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+<div class="wrap section">
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+</div>
+
+{% include "partials/signup-band.njk" %}
+
+{%- set latest = press | byDateDesc %}
+{%- if latest.length %}
+<section class="wrap section" aria-labelledby="latest-press">
+  <div class="section__head">
+    <h2 id="latest-press">In the press</h2>
+    <a class="section__more" href="/press/">All coverage →</a>
+  </div>
+  {%- set items = latest.slice(0, 3) %}
+  {% include "partials/press-list.njk" %}
+</section>
+{%- endif %}

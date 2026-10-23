@@ -1,0 +1,8 @@
+<header class="page-header{% if header_image %} page-header--image{% endif %}">
+  {%- if header_image %}
+  <img class="page-header__image" src="{{ header_image }}" alt="{{ header_image_alt }}">
+  {%- endif %}
+  <div class="wrap page-header__inner">
+    <h1>{{ title }}</h1>
+  </div>
+</header>

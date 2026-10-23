@@ -1,0 +1,12 @@
+{%- if site.banner.show and site.banner.text -%}
+<aside class="banner" aria-label="Announcement">
+  <div class="wrap banner__inner">
+    {%- if site.banner.label %}<strong class="banner__label">{{ site.banner.label }}</strong>{% endif %}
+    {%- if site.banner.link %}
+    <a class="banner__text" href="{{ site.banner.link }}">{{ site.banner.text }}</a>
+    {%- else %}
+    <span class="banner__text">{{ site.banner.text }}</span>
+    {%- endif %}
+  </div>
+</aside>
+{%- endif -%}

@@ -1,0 +1,248 @@
+# Pages CMS configuration — https://pagescms.org/docs/configuration/
+# This defines what editors see at app.pagescms.org. Every Save is a commit to
+# the branch they're editing (main), which deploys the site in about a minute.
+
+media:
+  input: src/assets/uploads
+  output: /assets/uploads
+  categories: [image, document]
+  rename: safe
+
+settings:
+  content:
+    # Keep any front matter keys the CMS doesn't know about.
+    merge: true
+  commit:
+    # Show the editor's name/email on commits, not just "Pages CMS".
+    identity: user
+    templates:
+      update: "Update {filename} (via Pages CMS, {userName})"
+      create: "Create {filename} (via Pages CMS, {userName})"
+      delete: "Delete {filename} (via Pages CMS, {userName})"
+
+content:
+  - name: site
+    label: Site settings & announcement banner
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - name: banner
+        label: Announcement banner
+        description: The strip at the very top of every page. Use it for the next event or urgent news.
+        type: object
+        fields:
+          - name: show
+            label: Show the banner
+            type: boolean
+          - name: label
+            label: Short label
+            description: One or two words, e.g. "March", "Meeting", "Update".
+            type: string
+            options: { maxlength: 20 }
+          - name: text
+            label: Text
+            description: One line, e.g. "Wednesday 10/28 at 4:00pm, Pulaski Park, Northampton".
+            type: string
+            options: { maxlength: 120 }
+          - name: link
+            label: Link (optional)
+            description: Full web address starting with https://. Leave empty for no link.
+            type: string
+      - name: signup_url
+        label: Sign-up form link
+        description: The Google Form address. Every "Sign up" button on the site uses it.
+        type: string
+        required: true
+        pattern:
+          regex: "^https://"
+          message: Must be a full web address starting with https://
+      - name: signup_label
+        label: Sign-up button text
+        type: string
+        required: true
+      - name: email
+        label: General contact email
+        type: string
+      - name: tagline
+        label: Tagline
+        description: One sentence. Appears in the footer and in search results.
+        type: text
+      - name: footer_note
+        label: Footer note
+        type: text
+      - name: title
+        label: Site name
+        type: string
+        hidden: true
+
+  - name: home
+    label: Home page
+    type: file
+    path: src/index.md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        type: string
+        hidden: true
+      - name: description
+        label: Search/social description
+        description: One or two sentences shown in Google results and link previews.
+        type: text
+      - name: hero
+        label: Top section
+        type: object
+        fields:
+          - name: kicker
+            label: Small print under the buttons
+            type: string
+          - name: headline
+            label: Slogan (white text under the logo)
+            description: Press Enter to choose where the line breaks.
+            type: text
+            required: true
+          - name: subhead
+            label: Text under the headline
+            type: text
+      - name: facts
+        label: Key facts
+        description: Big numbers under the top section. Two to four works best.
+        type: object
+        list: true
+        fields:
+          - name: number
+            label: Number
+            type: string
+          - name: label
+            label: What it means
+            type: string
+      - name: body
+        label: Main text
+        type: rich-text
+        options: { format: markdown }
+
+  - name: press_items
+    label: Press coverage
+    description: News stories about the campaign. Newest are shown first automatically.
+    type: file
+    path: src/_data/press.json
+    format: json
+    list: true
+    fields:
+      - name: outlet
+        label: Outlet
+        description: e.g. Daily Hampshire Gazette
+        type: string
+        required: true
+      - name: headline
+        label: Headline
+        type: string
+        required: true
+      - name: date
+        label: Date published
+        type: date
+        required: true
+        options: { format: yyyy-MM-dd }
+      - name: url
+        label: Link to the story
+        type: string
+        required: true
+        pattern:
+          regex: "^https?://"
+          message: Must be a full web address starting with https://
+      - name: summary
+        label: One-line summary (optional)
+        type: text
+
+  - name: press_page
+    label: Press page
+    type: file
+    path: src/press.md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        type: string
+        hidden: true
+      - name: description
+        label: Search/social description
+        type: text
+      - name: header_image
+        label: Banner photo (optional)
+        description: Wide landscape photo. Leave empty for a plain header.
+        type: image
+      - name: header_image_alt
+        label: Banner photo description
+        type: string
+      - name: media_contact
+        label: Media contact
+        type: object
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: role, label: Role, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: phone, label: Phone, type: string }
+      - name: body
+        label: Intro text
+        type: rich-text
+        options: { format: markdown }
+
+  - name: contact_page
+    label: Contact page
+    type: file
+    path: src/contact.md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        type: string
+        hidden: true
+      - name: description
+        label: Search/social description
+        type: text
+      - name: header_image
+        label: Banner photo (optional)
+        type: image
+      - name: header_image_alt
+        label: Banner photo description
+        type: string
+      - name: body
+        label: Intro text
+        type: rich-text
+        options: { format: markdown }
+
+  - name: faq_page
+    label: FAQ page
+    type: file
+    path: src/faq.md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        type: string
+        hidden: true
+      - name: description
+        label: Search/social description
+        type: text
+      - name: header_image
+        label: Banner photo (optional)
+        type: image
+      - name: header_image_alt
+        label: Banner photo description
+        type: string
+      - name: questions
+        label: Questions
+        description: Shown in this order. Drag to reorder.
+        type: object
+        list: true
+        fields:
+          - name: question
+            label: Question
+            type: string
+            required: true
+          - name: answer
+            label: Answer
+            type: rich-text
+            required: true
+            options: { format: markdown }
+      - name: body
+        label: Intro text
+        type: rich-text
+        options: { format: markdown }

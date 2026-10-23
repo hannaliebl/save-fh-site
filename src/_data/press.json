@@ -1,0 +1,23 @@
+[
+  {
+    "outlet": "Daily Hampshire Gazette",
+    "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "date": "2026-10-18",
+    "url": "https://example.com/article-1",
+    "summary": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+  },
+  {
+    "outlet": "New England Public Media",
+    "headline": "Duis aute irure dolor in reprehenderit in voluptate velit esse",
+    "date": "2026-10-12",
+    "url": "https://example.com/article-2",
+    "summary": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  {
+    "outlet": "MassLive",
+    "headline": "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+    "date": "2026-10-05",
+    "url": "https://example.com/article-3",
+    "summary": ""
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "title": "Save Fort Hill",
+  "tagline": "Keep the Center for Early Childhood Education at Fort Hill open.",
+  "signup_url": "https://forms.gle/REPLACE-WITH-GOOGLE-FORM",
+  "signup_label": "Sign up for updates",
+  "email": "organizers@example.org",
+  "banner": {
+    "show": true,
+    "label": "March",
+    "text": "Wednesday 10/28 at 4:00pm, Pulaski Park, Northampton",
+    "link": ""
+  },
+  "footer_note": "An independent campaign of Fort Hill families, teachers, and community members. Not affiliated with Smith College."
+}
