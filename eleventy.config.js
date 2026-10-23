@@ -40,6 +40,8 @@ export default function (eleventyConfig) {
 
   // For Markdown stored in front matter fields (e.g. FAQ answers).
   eleventyConfig.addFilter("markdown", (value) => md.render(String(value ?? "")));
+  // Single-line fields that allow **bold**, *italic*, and links (no paragraphs).
+  eleventyConfig.addFilter("markdownInline", (value) => md.renderInline(String(value ?? "")));
 
   eleventyConfig.addFilter("isoDate", (value) => String(value ?? "").slice(0, 10));
 

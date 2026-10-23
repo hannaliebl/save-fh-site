@@ -14,7 +14,7 @@ layout: layouts/base.njk
       <img class="hero__decor hero__decor--tulip" src="/assets/img/poster/tulip.png" alt="" width="126" height="240">
     </div>
     {%- if hero.headline %}<p class="hero__headline">{{ hero.headline | trim | escape | replace("\n", "<br>") | safe }}</p>{% endif %}
-    {%- if hero.subhead %}<p class="hero__subhead">{{ hero.subhead }}</p>{% endif %}
+    {%- if hero.subhead %}<p class="hero__subhead">{{ hero.subhead | markdownInline | safe }}</p>{% endif %}
     <div class="hero__actions">
       <a class="button button--large button--primary" href="{{ site.letter_url }}">{{ site.letter_label }}</a>
       <a class="button button--large button--ghost" href="{{ site.signup_url }}">{{ site.signup_label }}</a>

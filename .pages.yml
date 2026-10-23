@@ -122,6 +122,7 @@ content:
             required: true
           - name: subhead
             label: Text under the headline
+            description: Wrap words in **double asterisks** to make them bold.
             type: text
       - name: facts
         label: Key facts
