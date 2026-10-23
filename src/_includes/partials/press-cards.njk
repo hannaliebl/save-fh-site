@@ -10,7 +10,13 @@
         {%- if item.date %}<time datetime="{{ item.date | isoDate }}">{{ item.date | longDate }}</time>{% endif %}
       </p>
       {#- The link covers the whole card (see .press-card__headline a::after) #}
-      <h3 class="press-card__headline"><a href="{{ item.url }}">{{ item.headline }}</a></h3>
+      <h3 class="press-card__headline">
+        <a href="{{ item.url }}" target="_blank" rel="noopener">
+          {{- item.headline -}}
+          <svg class="icon-external" aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="16" height="16"><path d="M9 2h5v5M14 2 7 9M12 9.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="visually-hidden">(opens in a new tab)</span>
+        </a>
+      </h3>
       {%- if item.summary %}<p class="press-card__summary">{{ item.summary }}</p>{% endif %}
     </div>
   </li>
