@@ -3,9 +3,36 @@
     "title": "We're marching on Wednesday 10/28",
     "when": "Wednesday, October 28 at 4:00pm",
     "where": "Starting from Pulaski Park, Northampton",
-    "details": "",
+    "details": "Rally to Save Fort Hill.",
     "image": "/assets/uploads/events/march-2026-10-28.jpg",
     "image_alt": "Poster: We're marching on Wednesday 10/28, starting from Pulaski Park at 4pm",
+    "link": ""
+  },
+  {
+    "title": "Deadline to sign our open letter",
+    "when": "By Sunday, October 25",
+    "where": "",
+    "details": "Especially if you are Smith faculty, staff, a student, an alum, or a member of the Smith community.",
+    "image": "",
+    "image_alt": "",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLScGdtxb0g4jfrACbn_kr5eFh7JQnMagNrQ-cP_VI3dV2t-ZTw/viewform"
+  },
+  {
+    "title": "Smith faculty meeting",
+    "when": "Monday, October 26",
+    "where": "",
+    "details": "",
+    "image": "",
+    "image_alt": "",
+    "link": ""
+  },
+  {
+    "title": "Fort Hill parent info session with Smith administration",
+    "when": "Monday, October 26",
+    "where": "",
+    "details": "",
+    "image": "",
+    "image_alt": "",
     "link": ""
   }
 ]

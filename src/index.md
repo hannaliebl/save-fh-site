@@ -1,35 +1,43 @@
 ---
 title: Save Fort Hill
 description: Smith College plans to close the Center for Early Childhood
-  Education at Fort Hill. Families, teachers, and neighbors are organizing to
-  keep it open.
+  Education at Fort Hill, just after its 100th anniversary. Parents, staff,
+  faculty, and community members are working to keep it open.
 hero:
   kicker: Center for Early Childhood Education at Fort Hill · Northampton, MA
   headline: |-
     Protect teachers. Protect children.
     Keep Fort Hill open.
-  subhead: Smith College plans to close Fort Hill. Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+  subhead: On October 19, families and staff learned from a surprise email that
+    Smith College plans to close Fort Hill, just after the center's 100th
+    anniversary.
 facts:
   - number: "90"
-    label: Families with children enrolled today (placeholder)
-  - number: XXXX
-    label: Planned closure date (placeholder)
-  - number: XX
-    label: Years Fort Hill has served Northampton families (placeholder)
+    label: Children Fort Hill serves today
+  - number: "100"
+    label: Years of Fort Hill. The center just marked its 100th anniversary.
+  - number: Hundreds
+    label: People already involved in keeping Fort Hill open
 ---
 ## What's happening
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+On October 19, families and staff learned from a surprise email that Smith College plans to close Fort Hill, just after the center's 100th anniversary. No parents, faculty, students, or Fort Hill staff were involved in this decision.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The impact of Fort Hill's closure would be devastating for current families, faculty, staff, students, alums, the local community, and the college's reputation.
+
+## Who we are
+
+We're a group of parents, staff, faculty, and concerned community members working to ensure that this valued resource, which serves 90 children, remains in operation.
 
 ## What we're asking for
 
-- **Lorem ipsum.** Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- **Lorem ipsum.** Sed do eiusmod tempor incididunt ut labore.
-- **Lorem ipsum.** Ut enim ad minim veniam, quis nostrud exercitation.
+We're working to reverse this decision, and to seek clarity and stability for families and the community.
 
 ## How you can help
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+- **Sign our open letter**, especially if you are Smith faculty, staff, a student, an alum, or a member of the Smith community. [Sign the letter](https://docs.google.com/forms/d/e/1FAIpQLScGdtxb0g4jfrACbn_kr5eFh7JQnMagNrQ-cP_VI3dV2t-ZTw/viewform)
+- **Join the fight.** Sign up to join the hundreds of people already involved, whether you want to organize, show up, or just stay in the loop. [Join the fight](https://docs.google.com/forms/d/e/1FAIpQLSevD4Ca_rB9jL27tmj6I0YbhcPIyUDwqXOEH3nwCg--nbleXQ/viewform)
+- **Come to the rally** on Wednesday, October 28 at 4pm, starting from Pulaski Park.
+- **Spread the word** with our [posters and flyers](https://drive.google.com/drive/folders/12xnovxjWQhHbvgoSwgvaoQ_tBB_A9ba3).
+
+This is a fast-moving situation, and we'll share more calls to action soon.

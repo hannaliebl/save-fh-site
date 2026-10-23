@@ -142,7 +142,7 @@ content:
 
   - name: events
     label: Upcoming events
-    description: Shown on the home page under the top section. Remove past events; leave the list empty to hide the section.
+    description: Shown on the home page under the top section. Events with a poster or photo are shown large; the rest go in a "Key dates" list. Remove past events; leave the list empty to hide the section.
     type: file
     path: src/_data/events.json
     format: json
@@ -164,6 +164,7 @@ content:
         type: text
       - name: image
         label: Poster or photo (optional)
+        description: Adding one features the event in a large card.
         type: image
       - name: image_alt
         label: Image description
