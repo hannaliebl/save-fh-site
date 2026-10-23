@@ -9,8 +9,7 @@ hero:
     Keep Fort Hill open.
   subhead: On October 19, families and staff learned from a surprise email that
     Smith College plans to close Fort Hill (Smith College's Center for Early
-    Childhood Education) on June 4, 2027, just after the center's 100th
-    anniversary. No parents, faculty, students, or Fort Hill staff were
+    Childhood Education) on June 4, 2027. No parents, faculty, students, or Fort Hill staff were
     involved in this decision. **The impact of Fort Hill's closure would be
     devastating** – for current families, faculty, staff, students, alums, the
     local community, and the college's reputation.
