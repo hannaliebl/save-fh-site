@@ -246,7 +246,7 @@ a:hover { text-decoration-thickness: 2px; }
 .hero__logo { margin: 0; }
 /* Sized by viewport height too, so the buttons stay above the fold on
    short laptop screens. */
-.hero__logo img { width: min(clamp(10rem, 5rem + 14vw, 18rem), 30vh); }
+.hero__logo img { width: min(clamp(10rem, 5rem + 14vw, 18rem), 26vh); }
 .hero__headline {
   max-width: 30ch;
   margin: 0 0 0.6em;
