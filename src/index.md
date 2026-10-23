@@ -18,7 +18,7 @@ facts:
   - number: XX
     label: Years Fort Hill has served Northampton families (placeholder)
 ---
-## What's happening!
+## What's happening
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
@@ -26,9 +26,9 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 ## What we're asking for
 
-- **Pause the closure.** Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- **Meet with families and teachers.** Sed do eiusmod tempor incididunt ut labore.
-- **Keep the teachers.** Ut enim ad minim veniam, quis nostrud exercitation.
+- **Lorem ipsum.** Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- **Lorem ipsum.** Sed do eiusmod tempor incididunt ut labore.
+- **Lorem ipsum.** Ut enim ad minim veniam, quis nostrud exercitation.
 
 ## How you can help
 
