@@ -6,10 +6,11 @@
     <div class="site-footer__body">
       <p class="site-footer__tagline">{{ site.tagline }}</p>
       <ul class="site-footer__links">
+        <li><a href="{{ site.letter_url }}">{{ site.letter_label }}</a></li>
         <li><a href="{{ site.signup_url }}">{{ site.signup_label }}</a></li>
-        <li><a href="/faq/">FAQ</a></li>
-        <li><a href="/press/">Press</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        {%- for item in nav | rejectattr("hidden") %}
+        <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+        {%- endfor %}
         {%- if site.email %}
         <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         {%- endif %}

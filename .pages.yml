@@ -49,18 +49,37 @@ content:
             label: Link (optional)
             description: Full web address starting with https://. Leave empty for no link.
             type: string
+      - name: letter_url
+        label: Letter link (main button)
+        description: The "Sign the letter" Google Form. Used for the biggest button on the home page and the button in the header.
+        type: string
+        required: true
+        pattern:
+          regex: "^https://"
+          message: Must be a full web address starting with https://
+      - name: letter_label
+        label: Letter button text
+        type: string
+        required: true
       - name: signup_url
-        label: Sign-up form link
-        description: The Google Form address. Every "Sign up" button on the site uses it.
+        label: Join / sign-up form link
+        description: The "Join the fight" Google Form for updates and volunteers.
         type: string
         required: true
         pattern:
           regex: "^https://"
           message: Must be a full web address starting with https://
       - name: signup_label
-        label: Sign-up button text
+        label: Join button text
         type: string
         required: true
+      - name: resources_url
+        label: Posters & resources link (optional)
+        description: e.g. the shared Google Drive folder. Leave empty to hide the button.
+        type: string
+      - name: resources_label
+        label: Posters & resources button text
+        type: string
       - name: email
         label: General contact email
         type: string
@@ -121,9 +140,42 @@ content:
         type: rich-text
         options: { format: markdown }
 
+  - name: events
+    label: Upcoming events
+    description: Shown on the home page under the top section. Remove past events; leave the list empty to hide the section.
+    type: file
+    path: src/_data/events.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: when
+        label: When
+        description: e.g. "Wednesday, October 28 at 4:00pm"
+        type: string
+      - name: where
+        label: Where
+        type: string
+      - name: details
+        label: Details (optional)
+        type: text
+      - name: image
+        label: Poster or photo (optional)
+        type: image
+      - name: image_alt
+        label: Image description
+        description: Describe the image, or type out the poster's text, for screen readers.
+        type: string
+      - name: link
+        label: Link for more details (optional)
+        type: string
+
   - name: press_items
     label: Press coverage
-    description: News stories about the campaign. Newest are shown first automatically.
+    description: News stories about the campaign, shown in this order. Drag to reorder; put the newest at the top.
     type: file
     path: src/_data/press.json
     format: json
@@ -139,9 +191,9 @@ content:
         type: string
         required: true
       - name: date
-        label: Date published
+        label: Date published (optional)
         type: date
-        required: true
+        default: ""
         options: { format: yyyy-MM-dd }
       - name: url
         label: Link to the story
@@ -150,8 +202,13 @@ content:
         pattern:
           regex: "^https?://"
           message: Must be a full web address starting with https://
+      - name: image
+        label: Image
+        description: The article's preview photo. Landscape works best.
+        type: image
       - name: summary
         label: One-line summary (optional)
+        description: e.g. "Opinion by Jane Doe"
         type: text
 
   - name: press_page
@@ -210,7 +267,7 @@ content:
         options: { format: markdown }
 
   - name: faq_page
-    label: FAQ page
+    label: FAQ page (hidden on the site for now)
     type: file
     path: src/faq.md
     format: yaml-frontmatter

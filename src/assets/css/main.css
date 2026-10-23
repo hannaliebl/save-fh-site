@@ -141,7 +141,10 @@ a:hover { text-decoration-thickness: 2px; }
 .button--small { padding: 0.45em 0.9em; font-size: var(--step--1); }
 .button--large { padding: 0.85em 1.5em; }
 .button--ghost { background: transparent; color: var(--ink); }
+.button--primary { font-size: var(--step-1); padding: 0.8em 1.6em; }
 .button--orange { background: var(--orange); border-color: var(--orange); color: var(--ink); }
+.button--ghost-light { background: transparent; border-color: var(--paper); color: var(--paper); }
+.button--ghost-light:hover { box-shadow: 4px 4px 0 var(--orange); }
 .button--orange:hover { box-shadow: 4px 4px 0 var(--paper); }
 
 @media (prefers-reduced-motion: reduce) {
@@ -383,32 +386,95 @@ a:hover { text-decoration-thickness: 2px; }
   color: var(--ink);
 }
 
-/* --- Press list ---------------------------------------------------------- */
+/* --- Press cards -------------------------------------------------------- */
 
-.press-list { margin: 0; padding: 0; list-style: none; }
-.press-item {
-  padding-block: var(--space-s);
-  border-bottom: 1px solid var(--rule);
+.press-cards {
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.press-item__meta {
+.press-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 2px solid var(--ink);
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.press-card:hover,
+.press-card:focus-within {
+  box-shadow: 6px 6px 0 var(--orange);
+  transform: translate(-2px, -2px);
+}
+.press-card__image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-bottom: 2px solid var(--ink);
+}
+.press-card__body { padding: var(--space-s); }
+/* Phones: compact rows (thumbnail beside text) so the list isn't endless */
+@media (max-width: 40rem) {
+  .press-card { flex-direction: row; align-items: stretch; }
+  .press-card__image {
+    flex: none;
+    width: 6.5rem;
+    aspect-ratio: auto;
+    border-bottom: 0;
+    border-right: 2px solid var(--ink);
+  }
+  .press-card__body { padding: 0.75rem 0.9rem; }
+}
+.press-card__meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem 0.75rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
   color: var(--ink-2);
   font-family: var(--font-ui);
   font-size: var(--step--1);
 }
-.press-item__outlet {
-  color: var(--ink);
+.press-card__outlet {
+  color: var(--orange-ink);
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-.press-item__headline { font-size: var(--step-1); line-height: 1.25; margin: 0 0 0.35rem; }
-.press-item__headline a { color: var(--ink); text-decoration: none; }
-.press-item__headline a:hover { text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 3px; }
-.press-item__summary { margin: 0; color: var(--ink-2); max-width: 42rem; }
+.press-card__headline { font-size: var(--step-0); line-height: 1.3; margin: 0; }
+.press-card__headline a { color: var(--ink); text-decoration: none; }
+/* Make the whole card clickable */
+.press-card__headline a::after { content: ""; position: absolute; inset: 0; }
+.press-card__headline a:focus-visible { outline: none; }
+.press-card:focus-within { outline: 3px solid var(--orange-ink); outline-offset: 3px; }
+.press-card__summary {
+  margin: 0.5rem 0 0;
+  color: var(--ink-2);
+  font-size: var(--step--1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .press-card { transition: none; }
+  .press-card:hover, .press-card:focus-within { transform: none; }
+}
+
+/* --- Events -------------------------------------------------------------- */
+
+.events__list { display: grid; gap: var(--space-l); margin: 0; padding: 0; list-style: none; }
+.event { display: grid; gap: var(--space-m); align-items: center; }
+@media (min-width: 48rem) {
+  .event { grid-template-columns: minmax(0, 22rem) 1fr; }
+}
+.event__image {
+  width: 100%;
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+.event__title { font-size: var(--step-3); margin-bottom: 0.4em; }
+.event__when { font-family: var(--font-ui); font-size: var(--step-1); line-height: 1.4; }
+.event__when strong { font-weight: 800; }
+.event__details { max-width: 36em; }
 
 /* --- FAQ ----------------------------------------------------------------- */
 
@@ -529,6 +595,7 @@ a:hover { text-decoration-thickness: 2px; }
 @media (min-width: 48rem) {
   .signup-band__inner { grid-template-columns: 1fr auto; }
 }
+.signup-band__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .signup-band h2 { font-size: var(--step-3); margin-bottom: 0.3em; }
 .signup-band p { margin: 0; color: #d8d2c8; max-width: 34em; }
 .signup-band :focus-visible { outline-color: var(--yellow); }

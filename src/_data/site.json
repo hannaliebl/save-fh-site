@@ -1,8 +1,12 @@
 {
   "title": "Save Fort Hill",
   "tagline": "Keep the Center for Early Childhood Education at Fort Hill open.",
-  "signup_url": "https://forms.gle/REPLACE-WITH-GOOGLE-FORM",
-  "signup_label": "Sign up for updates",
+  "letter_url": "https://docs.google.com/forms/d/e/1FAIpQLScGdtxb0g4jfrACbn_kr5eFh7JQnMagNrQ-cP_VI3dV2t-ZTw/viewform",
+  "letter_label": "Sign the letter",
+  "signup_url": "https://docs.google.com/forms/d/e/1FAIpQLSevD4Ca_rB9jL27tmj6I0YbhcPIyUDwqXOEH3nwCg--nbleXQ/viewform",
+  "signup_label": "Join the fight",
+  "resources_url": "https://drive.google.com/drive/folders/12xnovxjWQhHbvgoSwgvaoQ_tBB_A9ba3",
+  "resources_label": "Posters & resources",
   "email": "organizers@example.org",
   "banner": {
     "show": true,

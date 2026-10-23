@@ -1,0 +1,5 @@
+[
+  { "url": "/faq/", "label": "FAQ", "hidden": true },
+  { "url": "/press/", "label": "Press" },
+  { "url": "/contact/", "label": "Contact" }
+]

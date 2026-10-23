@@ -12,10 +12,11 @@ You don't need any technical knowledge or a GitHub account.
 
 | In the menu | What it changes |
 |-------------|-----------------|
-| **Site settings & announcement banner** | The black strip at the top of every page, the sign-up form link, the contact email |
+| **Site settings & announcement banner** | The black strip at the top of every page, the letter and "Join the fight" form links, the posters link, the contact email |
+| **Upcoming events** | The events section on the home page. Delete events once they're over. |
 | **Home page** | Slogan, key facts, and the main text |
-| **FAQ page** | The questions and answers. Click **Add an entry** for a new question, and drag to reorder. |
-| **Press coverage** | The list of news stories. Click **Add an entry** for a new one. They sort by date automatically. |
+| **FAQ page** | The questions and answers (the page is hidden on the site for now). |
+| **Press coverage** | The news stories, shown as cards with a photo. Click **Add an entry** for a new one and drag it to the top. |
 | **Press page** | The intro text and media contact |
 | **Contact page** | The intro text |
 

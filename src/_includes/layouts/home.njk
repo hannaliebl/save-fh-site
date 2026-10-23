@@ -16,12 +16,52 @@ layout: layouts/base.njk
     {%- if hero.headline %}<p class="hero__headline">{{ hero.headline | trim | escape | replace("\n", "<br>") | safe }}</p>{% endif %}
     {%- if hero.subhead %}<p class="hero__subhead">{{ hero.subhead }}</p>{% endif %}
     <div class="hero__actions">
-      <a class="button button--large" href="{{ site.signup_url }}">{{ site.signup_label }}</a>
-      <a class="button button--large button--ghost" href="/press/">Read the coverage</a>
+      <a class="button button--large button--primary" href="{{ site.letter_url }}">{{ site.letter_label }}</a>
+      <a class="button button--large button--ghost" href="{{ site.signup_url }}">{{ site.signup_label }}</a>
     </div>
     {%- if hero.kicker %}<p class="hero__kicker">{{ hero.kicker }}</p>{% endif %}
   </div>
 </section>
+
+{%- if events and events.length %}
+<section class="wrap section events" aria-labelledby="events-heading">
+  <div class="section__head">
+    <h2 id="events-heading">Upcoming events</h2>
+  </div>
+  <ul class="events__list">
+    {%- for event in events %}
+    <li class="event">
+      {%- if event.image %}
+      <img class="event__image" src="{{ event.image }}" alt="{{ event.image_alt }}" width="900" height="900" loading="lazy">
+      {%- endif %}
+      <div class="event__body">
+        <h3 class="event__title">{{ event.title }}</h3>
+        {%- if event.when or event.where %}
+        <p class="event__when">
+          {%- if event.when %}<strong>{{ event.when }}</strong>{% endif %}
+          {%- if event.when and event.where %}<br>{% endif %}
+          {%- if event.where %}{{ event.where }}{% endif %}
+        </p>
+        {%- endif %}
+        {%- if event.details %}<p class="event__details">{{ event.details }}</p>{% endif %}
+        {%- if event.link %}<p><a class="button" href="{{ event.link }}">Details</a></p>{% endif %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if press.length %}
+<section class="wrap section" aria-labelledby="press-heading">
+  <div class="section__head">
+    <h2 id="press-heading">In the media</h2>
+    <a class="section__more" href="/press/">All coverage →</a>
+  </div>
+  {%- set items = press.slice(0, 4) %}
+  {% include "partials/press-cards.njk" %}
+</section>
+{%- endif %}
 
 {%- if facts and facts.length %}
 <section class="facts" aria-label="Key facts">
@@ -43,15 +83,3 @@ layout: layouts/base.njk
 </div>
 
 {% include "partials/signup-band.njk" %}
-
-{%- set latest = press | byDateDesc %}
-{%- if latest.length %}
-<section class="wrap section" aria-labelledby="latest-press">
-  <div class="section__head">
-    <h2 id="latest-press">In the press</h2>
-    <a class="section__more" href="/press/">All coverage →</a>
-  </div>
-  {%- set items = latest.slice(0, 3) %}
-  {% include "partials/press-list.njk" %}
-</section>
-{%- endif %}

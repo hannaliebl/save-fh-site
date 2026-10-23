@@ -14,15 +14,17 @@ npm run build      # outputs _site/
 
 | File | What it is | Edited by |
 |------|------------|-----------|
-| `src/_data/site.json` | Sign-up link, contact email, announcement banner, footer | CMS |
+| `src/_data/site.json` | Letter / join / resources links, contact email, announcement banner, footer | CMS |
 | `src/index.md` | Home page (hero, key facts, main text) | CMS |
-| `src/_data/press.json` | Press coverage list (sorted by date automatically) | CMS |
+| `src/_data/press.json` | Press coverage cards, shown in list order | CMS |
 | `src/faq.md` | FAQ questions and answers (answers are Markdown in front matter) | CMS |
 | `src/press.md`, `src/contact.md` | Press and Contact page text | CMS |
 | `src/assets/uploads/` | Photos uploaded through the CMS | CMS |
 | `src/*.11tydata.json` | Which layout each page uses (kept out of front matter so CMS saves can't drop it) | Maintainers |
 | `src/_includes/`, `src/assets/css/` | Templates and styles | Maintainers |
 | `.pages.yml` | What the CMS shows editors | Maintainers |
+| `src/_data/nav.json` | Menu links. `"hidden": true` hides a page from the menu **and** stops it being built (currently: FAQ) | Maintainers |
+| `src/_data/events.json` | Upcoming events on the home page | CMS |
 | `src/_data/meta.js` | Site URL and `noindex` (set by the deploy workflow) | Maintainers |
 
 Markdown is **not** run through Nunjucks (`markdownTemplateEngine: false`), so editor text containing `{{` can't break the build.

@@ -1,0 +1,18 @@
+<ul class="press-cards">
+  {%- for item in items %}
+  <li class="press-card">
+    {%- if item.image %}
+    <img class="press-card__image" src="{{ item.image }}" alt="" width="720" height="480" loading="lazy">
+    {%- endif %}
+    <div class="press-card__body">
+      <p class="press-card__meta">
+        <span class="press-card__outlet">{{ item.outlet }}</span>
+        {%- if item.date %}<time datetime="{{ item.date | isoDate }}">{{ item.date | longDate }}</time>{% endif %}
+      </p>
+      {#- The link covers the whole card (see .press-card__headline a::after) #}
+      <h3 class="press-card__headline"><a href="{{ item.url }}">{{ item.headline }}</a></h3>
+      {%- if item.summary %}<p class="press-card__summary">{{ item.summary }}</p>{% endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ul>

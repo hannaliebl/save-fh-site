@@ -10,9 +10,9 @@ layout: layouts/base.njk
     </div>
 
     <h2 class="visually-hidden">Coverage</h2>
-    {%- set items = press | byDateDesc %}
+    {%- set items = press %}
     {%- if items.length %}
-    {% include "partials/press-list.njk" %}
+    {% include "partials/press-cards.njk" %}
     {%- else %}
     <p>Coverage will be listed here.</p>
     {%- endif %}

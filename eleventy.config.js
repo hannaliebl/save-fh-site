@@ -43,10 +43,6 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("isoDate", (value) => String(value ?? "").slice(0, 10));
 
-  // Newest first; entries without a date sink to the bottom.
-  eleventyConfig.addFilter("byDateDesc", (items) =>
-    [...(items ?? [])].sort((a, b) => String(b.date ?? "").localeCompare(String(a.date ?? ""))),
-  );
 }
 
 export const config = {

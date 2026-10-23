@@ -2,8 +2,13 @@
   <div class="wrap signup-band__inner">
     <div>
       <h2 id="signup-heading">Stay informed. Get involved.</h2>
-      <p>Get updates on meetings, actions, and ways to help. It takes a minute.</p>
+      <p>Join the fight for updates on meetings, actions, and ways to help. Spread the word with our posters and flyers.</p>
     </div>
-    <a class="button button--large button--orange" href="{{ site.signup_url }}">{{ site.signup_label }}</a>
+    <div class="signup-band__actions">
+      <a class="button button--large button--orange" href="{{ site.signup_url }}">{{ site.signup_label }}</a>
+      {%- if site.resources_url %}
+      <a class="button button--large button--ghost-light" href="{{ site.resources_url }}">{{ site.resources_label }}</a>
+      {%- endif %}
+    </div>
   </div>
 </section>

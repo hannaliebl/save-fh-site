@@ -1,23 +1,34 @@
 [
   {
-    "outlet": "Daily Hampshire Gazette",
-    "headline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "date": "2026-10-18",
-    "url": "https://example.com/article-1",
-    "summary": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
-  },
-  {
-    "outlet": "New England Public Media",
-    "headline": "Duis aute irure dolor in reprehenderit in voluptate velit esse",
-    "date": "2026-10-12",
-    "url": "https://example.com/article-2",
-    "summary": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "outlet": "Hoodline",
+    "headline": "Smith College Closing Fort Hill Childcare Center in Northampton",
+    "date": "",
+    "url": "https://hoodline.com/2026/10/smith-college-to-shut-northampton-daycare-80-kids-and-30-jobs-in-limbo",
+    "image": "/assets/uploads/press/hoodline-smith-closing-fort-hill.jpg",
+    "summary": ""
   },
   {
     "outlet": "MassLive",
-    "headline": "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    "date": "2026-10-05",
-    "url": "https://example.com/article-3",
+    "headline": "America can’t afford to lose the childcare it has, yet Smith plans to shutter Fort Hill",
+    "date": "",
+    "url": "https://www.masslive.com/opinion/2026/10/america-cant-afford-to-lose-the-childcare-it-has-yet-smith-plans-to-shutter-fort-hill-cheng-xu.html",
+    "image": "/assets/uploads/press/masslive-opinion-cheng-xu.jpg",
+    "summary": "Opinion by Cheng Xu"
+  },
+  {
+    "outlet": "MassLive",
+    "headline": "Smith College to close Fort Hill childcare center in June",
+    "date": "",
+    "url": "https://www.masslive.com/westernmass/2026/10/smith-college-to-close-fort-hill-childcare-center-in-june.html",
+    "image": "/assets/uploads/press/masslive-fort-hill-closing-june.jpg",
+    "summary": ""
+  },
+  {
+    "outlet": "Daily Hampshire Gazette",
+    "headline": "Smith College to close Fort Hill childcare center, leaving families reeling",
+    "date": "2026-10-20",
+    "url": "https://gazettenet.com/2026/10/20/smith-college-to-close-fort-hill-childcare-center-leaving-families-reeling",
+    "image": "/assets/uploads/press/gazette-families-reeling.jpg",
     "summary": ""
   }
 ]
